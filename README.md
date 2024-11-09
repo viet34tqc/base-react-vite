@@ -6,12 +6,13 @@
 - axios
 - @tanstack/react-query
 - tailwind
+- ...
 
 ## Install vitest
 
-- `pa -D vitest`
-- `pa -D @testing-library/react @testing-library/jest-dom @testing-library/user-event`: utilities to render React components, query elements, and simulate user interactions
-- `pa -D jsdom`: for testing React components that interact with the DOM (e.g., reading from or writing to the document)
+- `pnpm add -D vitest`
+- `pnpm add -D @testing-library/react @testing-library/jest-dom @testing-library/user-event`: utilities to render React components, query elements, and simulate user interactions
+- `pnpm add -D jsdom`: for testing React components that interact with the DOM (e.g., reading from or writing to the document)
 
 Config:
 

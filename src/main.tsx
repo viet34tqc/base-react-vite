@@ -1,7 +1,7 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.tsx'
+import './index.css'
 
 // Add Query Client if needed
 // const queryClient= new QueryClient({
@@ -17,5 +17,5 @@ createRoot(document.getElementById('root')!).render(
     {/* <QueryClientProvider queryClient={queryClient}> */}
     <App />
     {/* </QueryClientProvider> */}
-  </StrictMode>
-);
+  </StrictMode>,
+)

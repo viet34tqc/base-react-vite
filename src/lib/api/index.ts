@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 
 // Create an axios instance
 const api = axios.create({
@@ -7,41 +7,41 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-});
+})
 
 // Request Interceptor
 api.interceptors.request.use(
-  config => {
+  (config) => {
     // Modify the request configuration here (e.g., add authorization token)
-    const token = localStorage.getItem('authToken'); // Get token from storage
+    const token = localStorage.getItem('authToken') // Get token from storage
     if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`;
+      config.headers['Authorization'] = `Bearer ${token}`
     }
-    console.log('Request sent to', config.url); // Optional logging
-    return config;
+    console.log('Request sent to', config.url) // Optional logging
+    return config
   },
-  error => {
+  (error) => {
     // Handle request errors
-    return Promise.reject(error);
-  }
-);
+    return Promise.reject(error)
+  },
+)
 
 // Response Interceptor
 api.interceptors.response.use(
-  response => {
+  (response) => {
     // Process the response data here
-    console.log('Response received:', response);
-    return response;
+    console.log('Response received:', response)
+    return response
   },
-  error => {
+  (error) => {
     // Handle response errors (e.g., show an error message)
     if (error.response) {
-      console.error('API error', error.response.status);
+      console.error('API error', error.response.status)
     } else {
-      console.error('Network or other error', error.message);
+      console.error('Network or other error', error.message)
     }
-    return Promise.reject(error);
-  }
-);
+    return Promise.reject(error)
+  },
+)
 
-export default api;
+export default api

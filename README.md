@@ -37,6 +37,13 @@ export default defineConfig({
 });
 ```
 
+Creata a `setupFiles.ts` right in the root folder to provide global setup or configuration for your tests
+
+```ts
+// setupTests.ts
+import '@testing-library/jest-dom/vitest'; // Provide Jest DOM apis like: toHaveTextContent() and toHaveClass() so we can use them globally without importing the library in each test file.
+```
+
 ## Custom alias
 
 - `pnpm add @types/node`: provides the TypeScript definitions for Node modules, such as `path`, `fs`

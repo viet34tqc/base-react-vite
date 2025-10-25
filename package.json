@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint --fix",
     "test": "vitest",
     "preview": "vite preview",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css} --config ./.prettierrc",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css}",
     "prepare": "husky"
   },
   "dependencies": {
